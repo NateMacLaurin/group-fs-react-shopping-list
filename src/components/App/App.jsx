@@ -5,11 +5,30 @@ import './App.css';
 
 function App() {
 
-    let [itemName, setItemName] = useState('');
-    let [itemQuantity, setItemQuantity] = useState(0);
-    let [itemUnit, setItemUnit] = useState('');
-    //let [listArray, setListArray] = useState([]);
+    const [itemName, setItemName] = useState('');
+    const [itemQuantity, setItemQuantity] = useState(0);
+    const [itemUnit, setItemUnit] = useState('');
+    const [shoppingList, setShoppinglist] = useState([]);
 
+    useEffect( () => {
+        fetchList();
+    }, [])
+
+     const fetchList = () => {
+         axios({
+             method: 'GET',
+             url: '/list'
+         })
+         .then((response) => {
+             console.log('all response', response);
+             console.log('data only', response.data);
+             setShoppingList(response.data);
+         })
+         .catch(function (error) {
+             console.log('error on get', error);
+         });
+     }
+     
     const addPerson = (evt) => {
         evt.preventDefault();
         // create POST request to add this new person to the database
@@ -27,7 +46,7 @@ function App() {
             console.log(err);
         })
     }
-
+    
     return (
         <div className="App">
             <Header />
