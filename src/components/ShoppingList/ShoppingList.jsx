@@ -1,3 +1,5 @@
+import ListItem from '../ListItem/ListItem'
+
 function ShoppingList(shoppingList) {
     return (
         <div>
@@ -6,11 +8,7 @@ function ShoppingList(shoppingList) {
                 <button>Reset</button><button>Clear</button>
             </div>
             {shoppingList.map( item =>
-                (<div key={item.id}>
-                    <h3>{item.name}</h3>
-                    <p>{item.quanity} {item.unit}</p>
-                    <button>Buy</button><button>Remove</button>
-                </div>)
+                (<ListItem item={item})
             )}
         </div>
     )
