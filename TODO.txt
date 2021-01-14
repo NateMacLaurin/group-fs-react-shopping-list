@@ -1,0 +1,58 @@
+TODO: Travis, Joe, nate
+
+POOL/DATABASE/DUMMY DATA
+
+
+#############-JOE-################
+--GET--
+
+HEADER COMPONENT "Add an Item"
+
+COMPONENT GET with Axios
+ROUTER with js
+COMPONENT -> 
+
+#############-TRAVIS-################
+REACT UI
+--DELETE--
+
+COMPONENT DELETE with Axios
+ROUTER with js
+
+RESET BUTTON
+CLEAR BUTTON
+
+LIST COMPONENT
+.map
+LIST ITEM COMPONENT 
+-"Apples 5lbs Buy button remove button"
+
+#############-NATE-################
+
+req.body format
+response.data;
+
+id comes for free
+
+item.id
+item.name
+item.quantity
+item.unit
+
+item
+{ name: 'itemname',
+  quantity: 0,
+  unit: 'unitsize'}
+
+
+--POST--
+COMPONENT POST with Axios
+ROUTER with js
+
+REACT UI
+FORM COMPONENT 
+-Item INPUT
+-Qty INPUT
+-Unit INPUT
+- SAVE BUTTON
+
