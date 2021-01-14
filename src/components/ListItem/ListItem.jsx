@@ -1,17 +1,19 @@
+import './ListItem.css';
+
 function ListItem({item}) {
 
     const deleteItem = () => {
         
-        console.log('clicked delete');
+        console.log('clicked Remove');
         
-        axios.delete(`/list/${id}`, {
-            name: newCreatureName,
-            origin: newCreatureOrigin
-        }).then((response) => {
-            console.log(response);
-        }).catch((err) => {
-          console.log(err);
-        })
+        // axios.delete(`/list/${id}`, {
+        //     name: newCreatureName,
+        //     origin: newCreatureOrigin
+        // }).then((response) => {
+        //     console.log(response);
+        // }).catch((err) => {
+        //   console.log(err);
+        // })
     } // end deleteItem
 
     const markBought = () => {
