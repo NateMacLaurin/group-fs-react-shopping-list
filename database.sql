@@ -19,9 +19,13 @@ WHERE "name" ILIKE '%donut%';
 -- POST
 INSERT INTO "shoplist" ("name", "quantity", "unit")
 VALUES ('Bread', 1 ,'Loaf');
+INSERT INTO "shoplist" ("name", "quantity", "unit")
 VALUES ('Coffee', 1 ,'lbs');
+INSERT INTO "shoplist" ("name", "quantity", "unit")
 VALUES ('Chocolate', 6 ,'oz');
+INSERT INTO "shoplist" ("name", "quantity", "unit")
 VALUES ('Milk', 1 ,'Gal');
+INSERT INTO "shoplist" ("name", "quantity", "unit")
 VALUES ('Rosemary', 10, 'g');
 
 -- DELETE
