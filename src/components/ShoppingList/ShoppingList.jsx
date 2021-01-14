@@ -1,7 +1,7 @@
 import ListItem from '../ListItem/ListItem';
 import "./ShoppingList.css";
 
-function ShoppingList({ shoppingList }) {
+function ShoppingList({ shoppingList, fetchList }) {
     console.log('logging shopping list', shoppingList);
 
     return (
@@ -15,6 +15,7 @@ function ShoppingList({ shoppingList }) {
                 (<ListItem
                     key={item.id}
                     item={item}
+                    fetchList={fetchList}
                 />)
                 )}
             </div>
