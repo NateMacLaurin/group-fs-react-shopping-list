@@ -63,6 +63,7 @@ function App() {
             </main>
             <ShoppingList 
                 shoppingList={shoppingList}
+                fetchList={fetchList}
             />
         </div>
     );
