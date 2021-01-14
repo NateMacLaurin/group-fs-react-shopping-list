@@ -16,6 +16,22 @@ router.post('/', (req, res) => {
     });
 });
 
+// DELETE
+router.delete('/:id', (req, res) => {
+    let id = req.params.id; // id of the thing to delete
+    console.log('Delete route with id of', id);
+
+    const query = `DELETE FROM "shoplist" WHERE "id" = $1;`;
+
+    pool.query(query, [id])
+        .then((result) => {
+            res.sendStatus(204);
+        }).catch((error) => {
+            console.log('error');
+            res.sendStatus(500);
+        })
+});
+
 router.get('/', (req, res) => {
     const sqlText = `SELECT * FROM shoplist;`;
     pool.query(sqlText)

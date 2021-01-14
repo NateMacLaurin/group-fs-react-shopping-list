@@ -1,10 +1,18 @@
 import React, {useState, useEffect} from 'react';
 import Header from '../Header/Header.jsx';
 import './App.css';
+import ShoppingList from '../ShoppingList/ShoppingList';
 //import ListForm from '../ListForm/ListForm.jsx';
+
+const dummyShopList = [
+    {id: 1, name: 'Bread', quantity: 2, unit: 'loaves' },
+    {id: 2, name: 'Eggs', quantity: 1, unit: 'dozen' },
+    {id: 3, name: 'Milk', quantity: 1, unit: 'gallon' }
+  ];
 
 function App() {
 
+    //const [shoppingList, setShoppingList] = useState(dummyShopList);
     const [itemName, setItemName] = useState('');
     const [itemQuantity, setItemQuantity] = useState(0);
     const [itemUnit, setItemUnit] = useState('');
@@ -46,13 +54,15 @@ function App() {
             console.log(err);
         })
     }
-    
     return (
         <div className="App">
             <Header />
             <main>
                 <p>Under Construction...</p>
             </main>
+            <ShoppingList 
+                shoppingList={shoppingList}
+            />
         </div>
     );
 }

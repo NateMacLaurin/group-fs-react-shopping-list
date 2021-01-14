@@ -1,0 +1,10 @@
+.itemBox {
+    border: solid black 1px;
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    margin: 10px;
+    justify-self: center;
+    align-self: center;
+}
