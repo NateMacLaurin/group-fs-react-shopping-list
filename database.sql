@@ -12,6 +12,7 @@ CREATE TABLE "shoplist" (
 
 -- GET
 SELECT * FROM "shoplist";
+SELECT * FROM shoplist;
 
 SELECT * FROM "shoplist"
 WHERE "name" ILIKE '%donut%';
