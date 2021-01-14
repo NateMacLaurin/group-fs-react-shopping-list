@@ -12,8 +12,6 @@ function App() {
 
     const addPerson = (evt) => {
         evt.preventDefault();
-        console.log( `The person is ${famousPersonName} and they're famous for ${famousPersonRole}` );
-        
         // create POST request to add this new person to the database
         axios.post('/list', {
             name: itemName,
@@ -21,7 +19,7 @@ function App() {
             unit: itemUnit
         }).then((response) => {
             console.log('Response:', response.data);
-            //get render function
+            fetchList();
             setItemName('');
             setItemQuantity(0);
             setItemUnit('');
