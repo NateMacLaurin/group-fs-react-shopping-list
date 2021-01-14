@@ -3,7 +3,7 @@ import axios from 'axios';
 import Header from '../Header/Header.jsx';
 import './App.css';
 import ShoppingList from '../ShoppingList/ShoppingList';
-//import ListForm from '../ListForm/ListForm.jsx';
+import ListForm from '../ListForm/ListForm.jsx';
 
 const dummyShopList = [
     {id: 1, name: 'Bread', quantity: 2, unit: 'loaves' },
@@ -38,7 +38,7 @@ function App() {
          });
      }
      
-    const addPerson = (evt) => {
+    const addItem = (evt) => {
         evt.preventDefault();
         // create POST request to add this new person to the database
         axios.post('/list', {
@@ -60,10 +60,19 @@ function App() {
             <Header />
             <main>
                 <p>Under Construction...</p>
-            </main>
+            <ListForm 
+                itemName={itemName}
+                itemQuantity={itemQuantity}
+                itemUnit={itemUnit}
+                setItemName={setItemName}
+                setItemQuantity={setItemQuantity}
+                setItemUnit={setItemUnit}
+                addItem={addItem}
+            />
             <ShoppingList 
                 shoppingList={shoppingList}
             />
+            </main>
         </div>
     );
 }
