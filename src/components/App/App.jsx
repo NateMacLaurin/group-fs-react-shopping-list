@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import axios from 'axios';
 import Header from '../Header/Header.jsx';
 import './App.css';
 import ShoppingList from '../ShoppingList/ShoppingList';
@@ -12,11 +13,11 @@ const dummyShopList = [
 
 function App() {
 
-    //const [shoppingList, setShoppingList] = useState(dummyShopList);
+    const [shoppingList, setShoppingList] = useState(dummyShopList);
     const [itemName, setItemName] = useState('');
     const [itemQuantity, setItemQuantity] = useState(0);
     const [itemUnit, setItemUnit] = useState('');
-    const [shoppingList, setShoppinglist] = useState([]);
+    // const [shoppingList, setShoppinglist] = useState([]);
 
     useEffect( () => {
         fetchList();

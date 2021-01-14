@@ -13,6 +13,7 @@ function ShoppingList({ shoppingList }) {
             <div className="listContainer">
                 {shoppingList.map(item =>
                 (<ListItem
+                    key={item.id}
                     item={item}
                 />)
                 )}
