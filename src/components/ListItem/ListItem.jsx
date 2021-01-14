@@ -1,4 +1,10 @@
 function ListItem(item) {
+
+    const deleteItem = () => {
+
+    } // end deleteItem
+
+
     return (
         <div key={item.id}>
             <h3>{item.name}</h3>
