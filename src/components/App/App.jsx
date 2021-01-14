@@ -15,7 +15,7 @@ function App() {
 
     const [shoppingList, setShoppingList] = useState(dummyShopList);
     const [itemName, setItemName] = useState('');
-    const [itemQuantity, setItemQuantity] = useState(0);
+    const [itemQuantity, setItemQuantity] = useState();
     const [itemUnit, setItemUnit] = useState('');
     // const [shoppingList, setShoppinglist] = useState([]);
 

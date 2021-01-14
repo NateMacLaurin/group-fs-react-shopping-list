@@ -12,6 +12,8 @@ COMPONENT GET with Axios
 ROUTER with js
 COMPONENT -> 
 
+CLEAR BUTTON
+
 #############-TRAVIS-################
 REACT UI
 --DELETE--
@@ -19,8 +21,7 @@ REACT UI
 COMPONENT DELETE with Axios
 ROUTER with js
 
-RESET BUTTON
-CLEAR BUTTON
+BUY BUTTON
 
 LIST COMPONENT
 .map
@@ -44,7 +45,6 @@ item
   quantity: 0,
   unit: 'unitsize'}
 
-
 --POST--
 COMPONENT POST with Axios
 ROUTER with js
@@ -55,4 +55,3 @@ FORM COMPONENT
 -Qty INPUT
 -Unit INPUT
 - SAVE BUTTON
-
