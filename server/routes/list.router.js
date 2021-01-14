@@ -32,8 +32,9 @@ router.delete('/:id', (req, res) => {
         })
 });
 
+// GET
 router.get('/', (req, res) => {
-    const sqlText = `SELECT * FROM shoplist;`;
+    const sqlText = `SELECT * FROM "shoplist";`;
     pool.query(sqlText)
     .then((result) => {
         console.log('from db', result);
