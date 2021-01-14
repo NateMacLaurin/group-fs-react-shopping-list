@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Header from '../Header/Header.jsx'
+import Header from '../Header/Header.jsx';
+import ShoppingList from '../ShoppingList/ShoppingList';
 import './App.css';
 
 
@@ -11,6 +12,7 @@ function App() {
             <main>
                 <p>Under Construction...</p>
             </main>
+            <ShoppingList />
         </div>
     );
 }
