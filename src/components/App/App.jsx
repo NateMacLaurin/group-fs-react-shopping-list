@@ -5,6 +5,9 @@ import './App.css';
 import ShoppingList from '../ShoppingList/ShoppingList';
 import ListForm from '../ListForm/ListForm.jsx';
 
+
+//updates
+
 const dummyShopList = [
     {id: 1, name: 'Bread', quantity: 2, unit: 'loaves' },
     {id: 2, name: 'Eggs', quantity: 1, unit: 'dozen' },
