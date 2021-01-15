@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import axios from 'axios';
 import './ListItem.css';
 
@@ -16,9 +17,11 @@ function ListItem({ item, fetchList }) {
             })
     } // end deleteItem
 
+    const [isBought, setIsBought] = useState(true);
+
     const markBought = () => {
-        console.log('clicked Buy');
-        console.log('id:', item.id);
+        console.log('clicked Buy', isBought);
+        setIsBought(!isBought);
     } // end markBought
 
     console.log('logging item:', item);
@@ -27,8 +30,10 @@ function ListItem({ item, fetchList }) {
         <div key={item.id} className="itemBox">
             <h3>{item.name}</h3>
             <p>{item.quantity} {item.unit}</p>
-            <button onClick={markBought}>Buy</button><button onClick={deleteItem}>Remove</button>
-        </div>
+            {isBought 
+                ? <span><button onClick={markBought}>Buy</button> <button onClick={deleteItem}>Remove</button></span>
+                : <span>Purchased</span>}
+        </div>  
     )
 } // end ListItem
 
