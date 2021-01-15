@@ -1,9 +1,10 @@
 import ListItem from '../ListItem/ListItem';
 import "./ShoppingList.css";
+import axios from 'axios';
 
 function ShoppingList({ shoppingList, fetchList }) {
     console.log('logging shopping list', shoppingList);
-    
+
     const deleteRows = () => {
         console.log('clicked clear');
         axios.delete('/list/deleteall')
