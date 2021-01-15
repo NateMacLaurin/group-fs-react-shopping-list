@@ -8,7 +8,7 @@ function ListItem({ item, fetchList }) {
         console.log('clicked Remove');
         console.log('id:', item.id);
 
-        axios.delete(`/list/${item.id}`)
+        axios.delete(`/list/item/${item.id}`)
             .then((response) => {
                 console.log(response);
                 fetchList();
