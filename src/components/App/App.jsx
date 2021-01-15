@@ -15,7 +15,7 @@ function App() {
 
     const [shoppingList, setShoppingList] = useState(dummyShopList);
     const [itemName, setItemName] = useState('');
-    const [itemQuantity, setItemQuantity] = useState();
+    const [itemQuantity, setItemQuantity] = useState('');
     const [itemUnit, setItemUnit] = useState('');
     // const [shoppingList, setShoppinglist] = useState([]);
 
@@ -49,7 +49,7 @@ function App() {
             console.log('Response:', response.data);
             fetchList();
             setItemName('');
-            setItemQuantity(0);
+            setItemQuantity('');
             setItemUnit('');
         }).catch((err) => {
             console.log(err);
