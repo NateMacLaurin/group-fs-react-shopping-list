@@ -17,6 +17,8 @@ SELECT * FROM shoplist;
 SELECT * FROM "shoplist"
 WHERE "name" ILIKE '%donut%';
 
+DELETE FROM "shoplist" WHERE id > 0;
+
 -- POST
 INSERT INTO "shoplist" ("name", "quantity", "unit")
 VALUES ('Bread', 1 ,'Loaf');

@@ -5,6 +5,9 @@ import './App.css';
 import ShoppingList from '../ShoppingList/ShoppingList';
 import ListForm from '../ListForm/ListForm.jsx';
 
+
+//updates
+
 const dummyShopList = [
     {id: 1, name: 'Bread', quantity: 2, unit: 'loaves' },
     {id: 2, name: 'Eggs', quantity: 1, unit: 'dozen' },
@@ -15,7 +18,7 @@ function App() {
 
     const [shoppingList, setShoppingList] = useState(dummyShopList);
     const [itemName, setItemName] = useState('');
-    const [itemQuantity, setItemQuantity] = useState();
+    const [itemQuantity, setItemQuantity] = useState('');
     const [itemUnit, setItemUnit] = useState('');
     // const [shoppingList, setShoppinglist] = useState([]);
 
@@ -49,7 +52,7 @@ function App() {
             console.log('Response:', response.data);
             fetchList();
             setItemName('');
-            setItemQuantity(0);
+            setItemQuantity('');
             setItemUnit('');
         }).catch((err) => {
             console.log(err);
